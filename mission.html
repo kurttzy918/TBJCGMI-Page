@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission & Vision | Torch Bearer of Jesus Christ Global Ministries Inc.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        :root {
+            --primary: #3a6ea5;
+            --secondary: #ff9a3c;
+            --light: #f8f9fa;
+            --dark: #2a3d5e;
+            --accent: #c05746;
+            --text: #333333;
+        }
+
+        body {
+            background-color: #f5f7fb;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(42, 61, 94, 0.85), rgba(58, 110, 165, 0.9)), url('https://images.unsplash.com/photo-1518834103328-2ca6c8b3a4c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .mission-vision-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .mission-card .card-icon {
+            background: linear-gradient(135deg, var(--secondary), #e6892e);
+        }
+
+        .vision-card .card-icon {
+            background: linear-gradient(135deg, var(--accent), #a34132);
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            color: var(--dark);
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .highlight-text {
+            background: linear-gradient(120deg, rgba(255, 154, 60, 0.15) 0%, rgba(58, 110, 165, 0.15) 100%);
+            border-left: 4px solid var(--secondary);
+            padding: 1.5rem;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .scripture {
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 1.5rem;
+            display: block;
+        }
+
+        .global-reach {
+            background-color: var(--light);
+            padding: 4rem 2rem;
+            margin-bottom: 5rem;
+            border-radius: 12px;
+        }
+
+        .global-reach h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .regions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .region {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .region:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .region i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .region h3 {
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .region.middle-east i {
+            color: #c05746;
+        }
+
+        .region.philippines i {
+            color: #3a6ea5;
+        }
+
+        .region.uttermost i {
+            color: #2a9d8f;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e6892e;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            color: var(--secondary);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 992px) {
+            .mission-vision-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav a {
+                margin: 0.5rem 1rem;
+            }
+            
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .card {
+                padding: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+            }
+            
+            .mobile-nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            .mobile-nav.active {
+                display: block;
+            }
+            
+            .mobile-nav ul {
+                flex-direction: column;
+            }
+            
+            .mobile-nav li {
+                margin: 0.5rem 0;
+            }
+        }
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover:before {
+            width: 80%;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            background: rgba(45, 85, 164, 0.1);
+        }
+
+        .nav-link.active:before {
+            width: 80%;
+        }
+
+        .donate-btn {
+            background: linear-gradient(135deg, var(--accent), #ff6b6b);
+            color: white !important;
+            padding: 10px 24px !important;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.3);
+            transition: var(--transition);
+        }
+
+        .donate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        .donate-btn:before {
+            display: none;
+        }
+        /* ========== MOBILE-FIRST NAVBAR ========== */
+        .navbar-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .navbar-wrapper.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            min-height: 70px;
+        }
+
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 250px;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+
+        .logo-text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+        }
+
+        .logo-subtext {
+            font-size: 0.75rem;
+            color: var(--gray);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-cross"></i>
+                <span>TBJCGMI</span>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Navigation Links -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="mission.html" class="nav-link">Mission</a></li>
+                    <li class="dropdown" id="sectorsDropdown">
+                        <a href="sectors.html" class="nav-link dropdown-toggle">
+                            Sectors
+                            <i class="dropdown-arrow">▼</i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="sector-A.html" class="dropdown-item">Sec A</a>
+                            <a href="sector-C.html" class="dropdown-item">Sec C</a>
+                            <a href="sector-D.html" class="dropdown-item">Sec D</a>
+                            <a href="sector-F.html" class="dropdown-item">Sec F</a>
+                            <a href="sector-I.html" class="dropdown-item">Sec I</a>
+                            <a href="sector-G.html" class="dropdown-item">Sec G</a>
+                            <a href="sector-K.html" class="dropdown-item">Sec K</a>
+                            <a href="sector-all.html" class="dropdown-item">View All Sectors</a>
+                        </div>
+                    </li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="#" class="nav-link donate-btn">Donate Now</a></li>
+                </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Mission & Vision</h1>
+        <p>Guided by faith, empowered by the Holy Spirit, and committed to sharing the Gospel to all nations</p>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <div class="container">
+        <div class="mission-vision-container">
+            <!-- Mission Card -->
+            <div class="card mission-card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2>Our Mission</h2>
+                <p>To be the light of the world and to go and make disciples of all nations, teaching that Jesus Christ is the only way to salvation through forgiveness of sins.</p>
+                
+                <div class="highlight-text">
+                    "You are the light of the world. A town built on a hill cannot be hidden." 
+                </div>
+                
+                <p>We are called to illuminate the darkness with God's truth and love, following the Great Commission to share the transformative message of Jesus Christ with every person, in every nation.</p>
+                
+                <span class="scripture">Matthew 5:14, Matthew 28:19-20</span>
+            </div>
+            
+            <!-- Vision Card -->
+            <div class="card vision-card">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2>Our Vision</h2>
+                <p>To be a global ministry empowered by the Holy Spirit, reaching the Middle East, the Philippines, and the uttermost parts of the earth with the Gospel of Jesus Christ.</p>
+                
+                <div class="highlight-text">
+                    "But you will receive power when the Holy Spirit comes on you; and you will be my witnesses... to the ends of the earth."
+                </div>
+                
+                <p>We envision a worldwide movement of believers transformed by the Gospel, equipped by the Holy Spirit, and committed to bringing Christ's message of hope and redemption to every corner of the globe.</p>
+                
+                <span class="scripture">Acts 1:8</span>
+            </div>
+        </div>
+
+        <!-- Global Reach Section -->
+        <section class="global-reach">
+            <h2>Our Global Focus Regions</h2>
+            <div class="regions">
+                <div class="region middle-east">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>The Middle East</h3>
+                    <p>Bringing the Gospel to the birthplace of Christianity, sharing the message of salvation in a region longing for spiritual truth.</p>
+                </div>
+                
+                <div class="region philippines">
+                    <i class="fas fa-church"></i>
+                    <h3>The Philippines</h3>
+                    <p>Strengthening the faithful and reaching the unreached across the islands with discipleship and church planting initiatives.</p>
+                </div>
+                
+                <div class="region uttermost">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Uttermost Parts</h3>
+                    <p>Extending our mission to remote and unreached people groups, fulfilling the call to take the Gospel to all nations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Join Us in Fulfilling the Great Commission</h2>
+            <p>Whether through prayer, giving, or going, you can be part of our mission to share the Gospel with the world. Together, we can bring the light of Christ to all nations.</p>
+            <a href="#" class="btn">Get Involved Today</a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TBJCGMI</h3>
+                    <p>Guided by faith, empowered by the Spirit, committed to the Great Commission.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Ministries</a>
+                    <a href="#">Events Calendar</a>
+                    <a href="#">Sermons</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jeddah Saudi Arabia</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> TBJCGMI@outlook.com</p>
+                    <p><i class="fas fa-clock"></i> Friday Services: 11am & 2pm</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 TBJCGMI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.toggle('active');
+            
+            // Change icon
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileNav = document.getElementById('mobileNav');
+                    if(mobileNav.classList.contains('active')) {
+                        mobileNav.classList.remove('active');
+                        const menuBtnIcon = document.querySelector('#mobileMenuBtn i');
+                        menuBtnIcon.classList.remove('fa-times');
+                        menuBtnIcon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe cards and regions for animation
+        document.querySelectorAll('.card, .region').forEach(el => {
+            observer.observe(el);
+        });
+        // ========== DOM READY FUNCTION ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // ========== NAVBAR FUNCTIONALITY ==========
+            const navbarWrapper = document.getElementById('navbarWrapper');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            const sectorsDropdown = document.getElementById('sectorsDropdown');
+            
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbarWrapper.classList.add('scrolled');
+                } else {
+                    navbarWrapper.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile menu toggle
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('show');
+                    hamburger.classList.toggle('active');
+                    
+                    // Close dropdown if open
+                    if (sectorsDropdown) {
+                        sectorsDropdown.classList.remove('active');
+                        const arrow = sectorsDropdown.querySelector('.dropdown-arrow');
+                        if (arrow) arrow.style.transform = 'rotate(0)';
+                    }
+                });
+            }
+            
+            // Mobile dropdown functionality
+            if (sectorsDropdown) {
+                const dropdownToggle = sectorsDropdown.querySelector('.dropdown-toggle');
+                const dropdownArrow = sectorsDropdown.querySelector('.dropdown-arrow');
+                
+                dropdownToggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 767) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        sectorsDropdown.classList.toggle('active');
+                        dropdownArrow.style.transform = sectorsDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+                    }
+                });
+            }
+            
+            // ========== DOM READY FUNCTION ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // ========== NAVBAR FUNCTIONALITY ==========
+            const navbarWrapper = document.getElementById('navbarWrapper');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            const sectorsDropdown = document.getElementById('sectorsDropdown');
+            
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbarWrapper.classList.add('scrolled');
+                } else {
+                    navbarWrapper.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile menu toggle
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('show');
+                    hamburger.classList.toggle('active');
+                    
+                    // Close dropdown if open
+                    if (sectorsDropdown) {
+                        sectorsDropdown.classList.remove('active');
+                        const arrow = sectorsDropdown.querySelector('.dropdown-arrow');
+                        if (arrow) arrow.style.transform = 'rotate(0)';
+                    }
+                });
+            }
+            
+            // Mobile dropdown functionality
+            if (sectorsDropdown) {
+                const dropdownToggle = sectorsDropdown.querySelector('.dropdown-toggle');
+                const dropdownArrow = sectorsDropdown.querySelector('.dropdown-arrow');
+                
+                dropdownToggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 767) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        sectorsDropdown.classList.toggle('active');
+                        dropdownArrow.style.transform = sectorsDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+                    }
+                });
+            }
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 767) {
+                    // Close mobile menu
+                    if (navLinks.classList.contains('show') && !e.target.closest('.navbar')) {
+                        navLinks.classList.remove('show');
+                        hamburger.classList.remove('active');
+                    }
+                    
+                    // Close dropdown
+                    if (sectorsDropdown && sectorsDropdown.classList.contains('active') && !e.target.closest('.dropdown')) {
+                        sectorsDropdown.classList.remove('active');
+                        const arrow = sectorsDropdown.querySelector('.dropdown-arrow');
+                        if (arrow) arrow.style.transform = 'rotate(0)';
+                    }
+                }
+            });
+    </script>
+</body>
+</html>
